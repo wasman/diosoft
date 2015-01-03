@@ -8,6 +8,7 @@ import java.util.Arrays;
 public class ArraysUnion  {
 
     public static int[] inner(int[] rightArray, int[] leftArray) {
+
         int leftLenght = leftArray.length;
         int rightLenght = rightArray.length;
         Arrays.sort(leftArray);
@@ -88,23 +89,25 @@ public class ArraysUnion  {
     }
 
     public static int[] merge(int[] rightArray, int[] leftArray) {
-        int leftLenght = leftArray.length;
-        int rightLenght = rightArray.length;
-        Arrays.sort(leftArray);
-        Arrays.sort(rightArray);
 
-        int [] array = Arrays.copyOf(rightArray, leftLenght + rightLenght);
+        int[] array = {};
 
-        int quantity = 0;
-        for(int val: leftArray) {
-            int index = Arrays.binarySearch(rightArray, val);
-            if (index < 0 && (Arrays.binarySearch(array, val) < 0)) {
-                array[rightLenght+quantity] = val;
-                quantity++;
+        for (int val : rightArray) {
+            if (Arrays.binarySearch(array, val) < 0) {
+                array = Arrays.copyOf(array, array.length + 1);
+                array[array.length - 1] = val;
+                Arrays.sort(array);
             }
         }
 
-        array = Arrays.copyOf(array, rightArray.length + quantity);
+        for(int val: leftArray) {
+            if (Arrays.binarySearch(array, val) < 0) {
+                array = Arrays.copyOf(array, array.length + 1);
+                array[array.length - 1] = val;
+                Arrays.sort(array);
+            }
+        }
+
         return array;
 
     }

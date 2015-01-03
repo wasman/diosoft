@@ -1,26 +1,38 @@
 package com.hbt.Collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.TreeSet;
 
 public class MainCollection {
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
 
-        List<String> test1 = new ArrayList<String>();
-        List<String> test2 = new ArrayList<String>();
+        Integer[] rightArray = {3, 5, 24, 4, 1, 2, 34, 45, 32, 5};
+        Integer[] leftArray = {1, 5, 4, 23, 65, 32, 78};
 
-        test1.add("a");
-        test1.add("b");
-        test1.add("c");
+        Arrays.sort(leftArray);
+        Arrays.sort(rightArray);
 
-        test2.add("e");
-        test2.add("f");
-        test2.add("d");
+        System.out.println("leftArray: " + Arrays.toString(leftArray));
+        System.out.println("rightArray: " + Arrays.toString(rightArray));
 
-        List<String> unionList = CollectionUnion.union(test1, test2);
+        List<Integer> unionList = CollectionUnion.union(rightArray, leftArray);
+        System.out.println("Union: " + unionList.toString());
 
-        System.out.println(unionList.toString());
+        TreeSet<Integer> mergeTest = CollectionUnion.merge(rightArray, leftArray); // without duplicates
+        System.out.println("Merge: " + mergeTest.toString());
+
+        TreeSet<Integer> innerTest = CollectionUnion.inner(rightArray, leftArray);
+        System.out.println("Common: " + innerTest.toString());
+
+        TreeSet<Integer> outerTest = CollectionUnion.outer(rightArray, leftArray);
+        System.out.println("Difference: " + outerTest.toString());
+
+        ArrayList<Integer> leftUnionTest = CollectionUnion.leftUnion(rightArray, leftArray);
+        System.out.println("left union: " + leftUnionTest.toString());
+
 
     }
 
