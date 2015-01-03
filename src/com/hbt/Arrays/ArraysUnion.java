@@ -1,7 +1,8 @@
 package com.hbt.Arrays;
 
 
-import com.hbt.BuilderLs5.Person;
+import com.hbt.Builder.Person;
+
 import java.util.Arrays;
 
 public class ArraysUnion  {

@@ -1,4 +1,4 @@
-package com.hbt.BuilderLs5;
+package com.hbt.Builder;
 
 
 public class Person implements Comparable{

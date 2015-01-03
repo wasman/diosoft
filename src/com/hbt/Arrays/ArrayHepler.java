@@ -1,8 +1,7 @@
 package com.hbt.Arrays;
 
-import com.hbt.BuilderLs5.Person;
+import com.hbt.Builder.Person;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ArrayHepler {
