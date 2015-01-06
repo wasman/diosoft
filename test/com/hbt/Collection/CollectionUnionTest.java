@@ -42,4 +42,7 @@ public class CollectionUnionTest {
         assertEquals(expectedResults, returnValue);
 
     }
+
+
+
 }
