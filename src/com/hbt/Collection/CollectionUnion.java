@@ -28,11 +28,12 @@ public class CollectionUnion {
         return unionList;
     }
 
-    public static <T> TreeSet merge(T[] rightArray, T[] leftArray) {
+    public  <T> TreeSet merge(T[] rightArray, T[] leftArray) {
 
         TreeSet<T> mergeSet = new TreeSet<T>();
         mergeSet.addAll(Arrays.asList(rightArray));
         mergeSet.addAll(Arrays.asList(leftArray));
+
         return mergeSet;
 
     }

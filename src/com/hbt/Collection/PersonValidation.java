@@ -1,10 +1,11 @@
 package com.hbt.Collection;
 
-
-import com.hbt.Builder.Person;
-
 public interface PersonValidation {
 
-//    private boolean PersonValidator(Person person);
+    public <T> boolean validate(T person);
+
+    public <T> boolean validatePersons(T[] rightArray, T[] leftArray);
+
+
 
 }

@@ -18,21 +18,21 @@ public class MainCollection {
         System.out.println("leftArray: " + Arrays.toString(leftArray));
         System.out.println("rightArray: " + Arrays.toString(rightArray));
 
-        List<Integer> unionList = CollectionUnion.union(rightArray, leftArray);
-        System.out.println("Union: " + unionList.toString());
-
-        TreeSet<Integer> mergeTest = CollectionUnion.merge(rightArray, leftArray); // without duplicates
-        System.out.println("Merge: " + mergeTest.toString());
-
-        TreeSet<Integer> innerTest = CollectionUnion.inner(rightArray, leftArray);
-        System.out.println("Common: " + innerTest.toString());
-
-        TreeSet<Integer> outerTest = CollectionUnion.outer(rightArray, leftArray);
-        System.out.println("Difference: " + outerTest.toString());
-
-        ArrayList<Integer> leftUnionTest = CollectionUnion.leftUnion(rightArray, leftArray);
-        System.out.println("left union: " + leftUnionTest.toString());
-
+//        List<Integer> unionList = CollectionUnion.union(rightArray, leftArray);
+//        System.out.println("Union: " + unionList.toString());
+//
+//        TreeSet<Integer> mergeTest = CollectionUnion.merge(rightArray, leftArray); // without duplicates
+//        System.out.println("Merge: " + mergeTest.toString());
+//
+//        TreeSet<Integer> innerTest = CollectionUnion.inner(rightArray, leftArray);
+//        System.out.println("Common: " + innerTest.toString());
+//
+//        TreeSet<Integer> outerTest = CollectionUnion.outer(rightArray, leftArray);
+//        System.out.println("Difference: " + outerTest.toString());
+//
+//        ArrayList<Integer> leftUnionTest = CollectionUnion.leftUnion(rightArray, leftArray);
+//        System.out.println("left union: " + leftUnionTest.toString());
+//
 
     }
 
